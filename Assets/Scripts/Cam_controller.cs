@@ -2,20 +2,26 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Cam_controller : MonoBehaviour
+public class Cam_Controller : MonoBehaviour
 {
-    public float camSensibility = 20f;
     public float xRotation;
+    public GameObject playerBody;
 
+    private void Start()
+    {
+        playerBody = GameObject.Find("Main Cmera");
+    }
     void Update()
     {
-        float camX = Input.GetAxis("Horizontalcam") * camSensibility * Time.deltaTime;
-        float camY = Input.GetAxis("Verticalcam") * camSensibility * Time.deltaTime;
+        float speed = 20f;
+       float mouseX = Input.GetAxis("Mouse X") * speed * Time.deltaTime;
+       float mouseY = Input.GetAxis("Mouse Y") * speed * Time.deltaTime;
+       
+       xRotation -= mouseY;
+        xRotation = Mathf.Clamp(xRotation, -90, 90);
 
-        xRotation -= camY;
-        xRotation = Mathf.Clamp(xRotation, -90f, 90f);
-
-        transform.Rotate(transform.up * camX);
-        transform.localRotation = Quaternion.Euler(xRotation, 0, 0);
+        //playerBody.Rotate(Vector3.up * mouseX);
+     
+            transform.localRotation = Quaternion.Euler(xRotation, 0, 0);
     }
 }
