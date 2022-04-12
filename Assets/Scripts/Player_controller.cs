@@ -5,6 +5,7 @@ using UnityEngine;
 public class Player_controller : MonoBehaviour
 {
     public float speed = 20f;
+    public GameObject door;
 
     void Update()
     {
@@ -13,5 +14,13 @@ public class Player_controller : MonoBehaviour
 
         transform.Translate(Vector3.forward * speed * verticalInputmov * Time.deltaTime);
         transform.Translate(Vector3.right * speed * horizontalInputmov * Time.deltaTime);
+    }
+
+    public void OnTriggerEnter(Collider roomDoor)
+    {
+        if (roomDoor.gameObject.CompareTag("entrada_sala"))
+        { 
+            door.SetActive(true);
+        }
     }
 }
