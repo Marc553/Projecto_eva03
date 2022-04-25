@@ -433,7 +433,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 101434584}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.156, z: 0}
+  m_LocalPosition: {x: 0, y: 0.44, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 590154251}
@@ -3327,8 +3327,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1066927512}
-  m_LocalRotation: {x: 0.24504548, y: 0, z: 0, w: 0.9695116}
-  m_LocalPosition: {x: 0, y: 9.3359995, z: -10}
+  m_LocalRotation: {x: 0.15166783, y: 0, z: 0, w: 0.9884315}
+  m_LocalPosition: {x: 0, y: 10.039999, z: -14}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -3554,8 +3554,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1092364220}
-  m_LocalRotation: {x: 0.24504548, y: 0, z: 0, w: 0.9695116}
-  m_LocalPosition: {x: 0, y: 9.3359995, z: -10}
+  m_LocalRotation: {x: 0.15166783, y: 0, z: 0, w: 0.9884315}
+  m_LocalPosition: {x: 0, y: 10.039999, z: -14}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2122893568}
@@ -5394,8 +5394,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1721921845}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.7275152, y: 7.5660067, z: 52.83}
-  m_LocalScale: {x: 26.026878, y: 15.996139, z: -3.9105742}
+  m_LocalPosition: {x: 0.07, y: 9.86, z: 67.05}
+  m_LocalScale: {x: 32.88496, y: 21.087097, z: -3.9105742}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 7
@@ -5819,8 +5819,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2032354219}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.54, y: -1.5368376, z: 59.57}
-  m_LocalScale: {x: 1.1879, y: 1, z: 4.011108}
+  m_LocalPosition: {x: 0.51421, y: -1.147, z: 72.08}
+  m_LocalScale: {x: 1.351355, y: 1.1754, z: 4.011108}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
@@ -5978,10 +5978,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Damping: {x: 0.1, y: 0.5, z: 0.3}
-  ShoulderOffset: {x: 0, y: 5, z: -7}
+  ShoulderOffset: {x: 0, y: 4, z: -7}
   VerticalArmLength: 0.4
   CameraSide: 1
-  CameraDistance: 3
+  CameraDistance: 7
   CameraCollisionFilter:
     serializedVersion: 2
     m_Bits: 8
