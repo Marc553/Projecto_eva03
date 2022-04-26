@@ -5,7 +5,7 @@ using UnityEngine;
 public class Player_controller : MonoBehaviour
 {
     public float speed = 20f;
-    public GameObject door;
+    public GameObject[] door;
 
     void Update()
     {
@@ -18,9 +18,24 @@ public class Player_controller : MonoBehaviour
 
     public void OnTriggerEnter(Collider roomDoor)
     {
-        if (roomDoor.gameObject.CompareTag("entrada_sala"))
+        if (roomDoor.gameObject.CompareTag("entrada_sala1"))
         { 
-            door.SetActive(true);
+            door[0].SetActive(true);
+        }
+        
+        if (roomDoor.gameObject.CompareTag("entrada_sala2"))
+        { 
+            door[1].SetActive(true);
+        }
+        
+        if (roomDoor.gameObject.CompareTag("entrada_sala3"))
+        { 
+            door[2].SetActive(true);
+        }
+        
+        if (roomDoor.gameObject.CompareTag("entrada_sala4"))
+        { 
+            door[3].SetActive(true);
         }
     }
 }

@@ -5,7 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - pared
-  - entrada_sala
+  - entrada_sala2
+  - entrada_sala1
+  - entrada_sala3
+  - entrada_sala4
   layers:
   - Default
   - TransparentFX
@@ -13,8 +16,8 @@ TagManager:
   - todo con lo que se choca la camara
   - Water
   - UI
-  - 
-  - 
+  - Player Layer
+  - Enemy Layer
   - 
   - 
   - 
