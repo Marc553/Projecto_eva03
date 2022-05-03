@@ -4,35 +4,38 @@ using UnityEngine;
 
 public class Pruebas : MonoBehaviour
 {
-    private float distanciaRayo = 1000;
+    private GameObject player;
+
+    void Start()
+    {
+        player = GameObject.Find("Player");
+    }
 
     private void Update()
     {
-       
+        transform.LookAt(player.transform.position);
+        Debug.Log(IsPlayerOnSight());
     }
 
-    private bool IsPlayerOnSight()
-    {
-        // Información del hit del Raycast
-        RaycastHit hitData;
 
-        // Ray desde la posición del canon en dirección hacia adelante
-        Ray ray = new Ray(transform.position,transform.forward);
-
-        // RAYCAST VISUAL EN LA SCENE DE UNITY
-        Debug.DrawRay(transform.position, transform.forward * distanciaRayo, Color.yellow);
-
-        // Si Physics.Raycast con la distancia devuelve True
-        if (Physics.Raycast(ray, out hitData, distanciaRayo))
+        private bool IsPlayerOnSight()
         {
+        Ray ray = new Ray(transform.position, transform.forward);
+
+        float marcaRasho = 10000; 
+
+        Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * marcaRasho, Color.yellow);
+
+        RaycastHit infoHit;
+
+        if (Physics.Raycast(ray, out infoHit, marcaRasho))
+        {  
             
-            // Devuelve True or False dependiendo de si está tocando Player
-            return hitData.collider.CompareTag("Player");
+            return infoHit.collider.CompareTag("Player");
         }
         else
         {
-            // Devuelve False
             return false;
         }
+        }
     }
-}
