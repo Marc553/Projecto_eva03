@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Pruebas : MonoBehaviour
+public class Enemy_torreta : MonoBehaviour
 {
     private GameObject player;
 
@@ -14,11 +14,11 @@ public class Pruebas : MonoBehaviour
     private void Update()
     {
         transform.LookAt(player.transform.position);
-        Debug.Log(IsPlayerOnSight());
+        Debug.Log(VisionPlayer());
     }
 
 
-        private bool IsPlayerOnSight()
+        private bool VisionPlayer()
         {
         Ray ray = new Ray(transform.position, transform.forward);
 

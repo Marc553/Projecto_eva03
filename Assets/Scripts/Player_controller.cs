@@ -5,10 +5,11 @@ using UnityEngine;
 public class Player_controller : MonoBehaviour
 {
     public float speed = 20f;
+    private Rigidbody playerBody;
 
     private void Start()
     {
-
+        playerBody = GetComponent<Rigidbody>();
     }
 
     void Update()
@@ -16,7 +17,8 @@ public class Player_controller : MonoBehaviour
         float verticalInputmov = Input.GetAxis("Verticalmov"); 
         float horizontalInputmov = Input.GetAxis("Horizontalmov");
 
-        transform.Translate(Vector3.forward * speed * verticalInputmov * Time.deltaTime);
-        transform.Translate(Vector3.right * speed * horizontalInputmov * Time.deltaTime);
+        playerBody.AddForce(transform.forward * speed * verticalInputmov);
+        playerBody.AddForce(transform.right * speed * horizontalInputmov);
     }
+
 }
