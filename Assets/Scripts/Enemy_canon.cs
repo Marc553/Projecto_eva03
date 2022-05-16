@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy_torreta : MonoBehaviour
+public class Enemy_canon : MonoBehaviour
 {
     private GameObject player;
 

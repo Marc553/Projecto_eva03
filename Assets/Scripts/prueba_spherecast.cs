@@ -18,11 +18,6 @@ public class prueba_spherecast : MonoBehaviour
     private float distanciaDeGolpeo;
     
 
-    void Start()
-    {
-       
-    }
-
     void Update()
     {
         float verticalInputmov = Input.GetAxis("Verticalmov");
@@ -30,7 +25,7 @@ public class prueba_spherecast : MonoBehaviour
             
         transform.Translate(Vector3.forward * speed * verticalInputmov * Time.deltaTime);
             transform.Translate(Vector3.right * speed * horizontalInputmov * Time.deltaTime);
-        {
+        
             origen = transform.position;
             direccion = transform.forward;
             /*RaycastHit hit;
@@ -52,9 +47,15 @@ public class prueba_spherecast : MonoBehaviour
             foreach(RaycastHit hit in hits)
             {
                 golpea.Add(hit.transform.gameObject);
+            if(distanciaDeGolpeo > hit.distance)
+            {
                 distanciaDeGolpeo = hit.distance;
+                direccion = (transform.position - hit.transform.gameObject.transform.position).normalized;
+                Debug.Log(direccion);
             }
-        }
+                
+            }
+        
 
     }
     private void OnDrawGizmosSelected()
