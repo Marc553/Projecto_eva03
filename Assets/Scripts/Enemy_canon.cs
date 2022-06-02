@@ -13,7 +13,7 @@ public class Enemy_canon : MonoBehaviour
     [SerializeField] private float speed = 5f;
 
     // Variables del limite de sala 
-    private float deteccionLimSala = 40f;
+    private float deteccionLimSala = 57f;
     private bool playerDentroSala;
     [SerializeField] private LayerMask capasLimites;
 
@@ -22,7 +22,7 @@ public class Enemy_canon : MonoBehaviour
     private float tiempoAtaque = 2f;
     private bool puedePegar = true;
    
-    private float fuerzaAtaque = 20f;
+    private float fuerzaAtaque = 100f;
 
     #endregion
 

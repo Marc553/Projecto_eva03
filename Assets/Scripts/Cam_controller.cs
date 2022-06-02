@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Cam_Controller : MonoBehaviour
+public class Cam_controller : MonoBehaviour
 {
     public float xRotation;
     public GameObject playerBody;

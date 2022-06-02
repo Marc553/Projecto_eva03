@@ -7,9 +7,13 @@ public class Player_controller : MonoBehaviour
     public float speed = 20f;
     private Rigidbody playerBody;
 
+    private Animator playerAnimator;
+
+
     private void Start()
     {
         playerBody = GetComponent<Rigidbody>();
+        playerAnimator = GetComponent<Animator>();
     }
 
     void Update()
@@ -19,6 +23,12 @@ public class Player_controller : MonoBehaviour
 
         playerBody.AddForce(transform.forward * speed * verticalInputmov);
         playerBody.AddForce(transform.right * speed * horizontalInputmov);
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            playerAnimator.SetTrigger("Atacar");
+        }
+
     }
 
 }
