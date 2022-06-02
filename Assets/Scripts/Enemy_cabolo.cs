@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.AI;
 
 public class Enemy_cabolo : MonoBehaviour
-{/*
+{
     #region VARIALBES
     // Variables cogen datos del propio enemigo
     private NavMeshAgent agent;
@@ -122,5 +122,4 @@ public class Enemy_cabolo : MonoBehaviour
     }
     
     #endregion
-    */
 }

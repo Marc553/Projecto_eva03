@@ -17,26 +17,12 @@ public class Enemy_canon : MonoBehaviour
     private bool playerDentroSala;
     [SerializeField] private LayerMask capasLimites;
 
-    #region CODIGO AGENTE
-
-    // Distancias de las areas
-    private float areaVisionAg = 20;
-    private float areaAtaqueAg = 10;
-
-    // Bool de si el player esta dentro
-    private bool pruevaVisionAg;
-    private bool pruevaAtaqueAg;
-
-    // Capa que debe tenerse en cuenta para campos de visión y ataque
-    [SerializeField] private LayerMask playerLayer;
-
     // Ataque
     [SerializeField] private GameObject projectil;
     private float tiempoAtaque = 2f;
     private bool puedePegar = true;
-    private float fuerzaAtaqueArriba = 5f;
+   
     private float fuerzaAtaque = 20f;
-    #endregion
 
     #endregion
 
@@ -56,9 +42,9 @@ public class Enemy_canon : MonoBehaviour
 
         // Detecta si el player esta dentro de la sala para empezar persecucion/ataque
         Vector3 pos = transform.position;
-        playerDentroSala = Physics.SphereCast(pos, 0.5f, transform.forward, out RaycastHit hit, deteccionLimSala, capasLimites);
+        //playerDentroSala = Physics.SphereCast(pos, 0.5f, transform.forward, out RaycastHit hit, deteccionLimSala, capasLimites);
 
-        //playerDentroSala = Physics.CheckSphere(pos, deteccionLimSala, capasLimites);
+        playerDentroSala = Physics.CheckSphere(pos, deteccionLimSala, capasLimites);
 
         // Activamos la lógica de persecución 
         
