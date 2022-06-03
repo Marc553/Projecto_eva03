@@ -9,11 +9,18 @@ public class Player_controller : MonoBehaviour
 
     private Animator playerAnimator;
 
+    private Collider ataqueCollider;
+
+    private float timeBetweenAttacks = 1;
+
+    private bool canAttack = true;
+
 
     private void Start()
     {
         playerBody = GetComponent<Rigidbody>();
         playerAnimator = GetComponent<Animator>();
+        ataqueCollider = gameObject.transform.GetChild(2).GetComponent<Collider>();
     }
 
     void Update()
@@ -24,11 +31,28 @@ public class Player_controller : MonoBehaviour
         playerBody.AddForce(transform.forward * speed * verticalInputmov);
         playerBody.AddForce(transform.right * speed * horizontalInputmov);
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && canAttack)
         {
+            AtacarCollider();
             playerAnimator.SetTrigger("Atacar");
-        }
+            
 
+            canAttack = false;
+            StartCoroutine(AttackCooldown());
+
+        }
+    }
+
+    public void AtacarCollider()
+    {
+        ataqueCollider.enabled = true; 
+    }
+
+    private IEnumerator AttackCooldown()
+    {
+        yield return new WaitForSeconds(timeBetweenAttacks);
+        ataqueCollider.enabled = false;
+        canAttack = true;
     }
 
 }
