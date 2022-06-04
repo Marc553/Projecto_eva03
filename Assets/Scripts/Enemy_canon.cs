@@ -58,11 +58,11 @@ public class Enemy_canon : MonoBehaviour
 
     #region FUNCIONES
 
-    // Lógica de ataque (Agente)
+    // logica de ataque (Agente)
     private void Attack()
     {
         transform.LookAt(player.transform.position);
-        // Si hemos finalizado el Attack Cooldown
+        //si hemos finalizado el Attack Cooldown
         if (puedePegar)
         {
             // Disparamos bala con físicas
@@ -74,11 +74,23 @@ public class Enemy_canon : MonoBehaviour
             StartCoroutine(AttackCooldown());
         }
     }
+
+    //cooldown
     private IEnumerator AttackCooldown()
     {
         yield return new WaitForSeconds(tiempoAtaque);
         puedePegar = true;
     }
+
+    //logica collisiones
+    private void OnTriggerEnter(Collider otherCollider)
+    {
+        if (otherCollider.gameObject.CompareTag("espada"))
+        {
+            Destroy(gameObject);
+        }
+    }
+
 
     // Gizmos
     private void OnDrawGizmos()

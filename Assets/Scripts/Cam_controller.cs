@@ -12,16 +12,19 @@ public class Cam_controller : MonoBehaviour
     {
         playerBody = GameObject.Find("Player");
     }
-    void Update()
+
+    private void LateUpdate()
     {
-       float mouseX = Input.GetAxis("Horizontalcam") * speed * Time.deltaTime;
-       float mouseY = Input.GetAxis("Verticalcam") * speed * Time.deltaTime;
-       
-       xRotation -= mouseY;
+
+        float mouseX = Input.GetAxis("Horizontalcam") * speed * Time.deltaTime;
+        float mouseY = Input.GetAxis("Verticalcam") * speed * Time.deltaTime;
+
+        xRotation -= mouseY;
         xRotation = Mathf.Clamp(xRotation, -90, 90);
 
-       playerBody.transform.Rotate(Vector3.up * mouseX);
-     
-            transform.localRotation = Quaternion.Euler(xRotation, 0, 0);
+        playerBody.transform.Rotate(Vector3.up * mouseX);
+
+        transform.localRotation = Quaternion.Euler(xRotation, 0, 0);
     }
+
 }

@@ -60,6 +60,15 @@ public class Enemy_cabolo : MonoBehaviour
         
     }
 
+    //logica collisiones
+    private void OnTriggerEnter(Collider otherCollider)
+    {
+        if (otherCollider.gameObject.CompareTag("espada"))
+        {
+            Destroy(gameObject);
+        }
+    }
+
     // Gizmos
     private void OnDrawGizmos()
     {

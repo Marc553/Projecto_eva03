@@ -9,6 +9,9 @@ TagManager:
   - entrada_sala1
   - entrada_sala3
   - entrada_sala4
+  - espada
+  - cabolo
+  - Projectil
   layers:
   - Default
   - TransparentFX

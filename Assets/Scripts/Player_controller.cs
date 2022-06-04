@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class Player_controller : MonoBehaviour
 {
+    #region VARIABLES
+
     public float speed = 20f;
     private Rigidbody playerBody;
+    private float vida = 1;
 
     private Animator playerAnimator;
 
@@ -14,8 +17,9 @@ public class Player_controller : MonoBehaviour
     private float timeBetweenAttacks = 1;
 
     private bool canAttack = true;
+    #endregion
 
-
+    #region METODOS
     private void Start()
     {
         playerBody = GetComponent<Rigidbody>();
@@ -31,28 +35,44 @@ public class Player_controller : MonoBehaviour
         playerBody.AddForce(transform.forward * speed * verticalInputmov);
         playerBody.AddForce(transform.right * speed * horizontalInputmov);
 
-        if (Input.GetKeyDown(KeyCode.Space) && canAttack)
+        //reaccion de la vida del personaje
+        if (vida <= 0)
         {
-            AtacarCollider();
+            Destroy(gameObject);
+        }
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
             playerAnimator.SetTrigger("Atacar");
+        }
+    }
+#endregion
+
+    #region FUNCIONES
+    private void ActivarTrigger()
+    {
+        ataqueCollider.enabled = true;
+    }
+
+    private void DesactivarTrigger()
+    {
+        ataqueCollider.enabled = false;
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("cabolo"))
+        {
+            vida -= 0.5f;
+        }
+
+        if (collision.gameObject.CompareTag("Projectil"))
+        {
+            vida -= 1;
             
-
-            canAttack = false;
-            StartCoroutine(AttackCooldown());
-
+            Destroy(collision.gameObject);
         }
     }
 
-    public void AtacarCollider()
-    {
-        ataqueCollider.enabled = true; 
-    }
-
-    private IEnumerator AttackCooldown()
-    {
-        yield return new WaitForSeconds(timeBetweenAttacks);
-        ataqueCollider.enabled = false;
-        canAttack = true;
-    }
-
+    #endregion
 }
