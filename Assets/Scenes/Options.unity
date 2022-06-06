@@ -1679,6 +1679,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ambienteMenu: {fileID: 8300000, guid: 93c85068c56fdae42a490b4398e29726, type: 3}
   efecto: {fileID: 8300000, guid: c44372e6fce93134c9965d02c91777c1, type: 3}
+  volumeSliderMusica: {fileID: 662165239}
+  volumeSliderEfectos: {fileID: 233555958}
+  SceneChanges: {fileID: 0}
+  LastSceneChanges: {fileID: 0}
 --- !u!4 &1221137071
 Transform:
   m_ObjectHideFlags: 0

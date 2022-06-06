@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
+using UnityEngine.UI;
+using UnityEditor;
 
 
 public class Game_Manager : MonoBehaviour
@@ -19,15 +22,18 @@ public class Game_Manager : MonoBehaviour
     private int cabolosLeft;
     private int canonLeft;
 
+    //variables sonido / datapersistence
     private AudioSource musicaMazmorra;
     public AudioClip ambienteMazmorra;
 
     public AudioSource sonidoEfectos;
     public AudioClip efectoEnemigo;
-    
+
+    public TextMeshProUGUI volume; //float
 
 
-#endregion
+
+    #endregion
 
     private void Start()
     {
@@ -37,8 +43,15 @@ public class Game_Manager : MonoBehaviour
 
         sonidoEfectos = GameObject.Find("Efectos").GetComponent<AudioSource>();
 
+        musicaMazmorra.volume = Data_persistence.SharedInfo.volumenMusica;
+        sonidoEfectos.volume = Data_persistence.SharedInfo.volumenEfectos;
     }
     #region FUNCIONES
+
+    
+
+
+
     //logica de spawn de enemigos
     public void SpawnEnemy()
     {
