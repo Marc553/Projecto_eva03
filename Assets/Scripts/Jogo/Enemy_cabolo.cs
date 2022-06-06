@@ -11,6 +11,7 @@ public class Enemy_cabolo : MonoBehaviour
  
     private Transform player;
     [SerializeField] private float speed = 5f;
+
     // Variables del limite de sala 
     private float deteccionLimSala = 57f;
     private bool playerDentroSala;

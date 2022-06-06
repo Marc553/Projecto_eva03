@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class Game_Manager : MonoBehaviour
 {
+    #region VARIALBES
     //arrays de elementos/elementos exteriores
     public GameObject[] objectsPrefabs;
     public GameObject[] way_points;
@@ -14,27 +15,30 @@ public class Game_Manager : MonoBehaviour
     private GameObject SpawnPosition;
     private int randomEnemy;
     private int randomPosition;
-    private float spawnPositionRange = 30;
 
     private int cabolosLeft;
     private int canonLeft;
 
-    private GameObject sala1;
-    private GameObject sala2;
-    private GameObject sala3;
-    private GameObject sala4;
+    private AudioSource musicaMazmorra;
+    public AudioClip ambienteMazmorra;
 
+    public AudioSource sonidoEfectos;
+    public AudioClip efectoEnemigo;
+    
+
+
+#endregion
 
     private void Start()
     {
         SpawnEnemy();
-    }
-    private void Update()
-    {
-        //cabolosLeft = FindObjectOfType<Enemy_cabolo>().Length;
-        //canonLeft = FindObjectOfType<Enemy_cabolo>().Length;
-    }
+        musicaMazmorra = GetComponent<AudioSource>();
+        musicaMazmorra.PlayOneShot(ambienteMazmorra);
 
+        sonidoEfectos = GameObject.Find("Efectos").GetComponent<AudioSource>();
+
+    }
+    #region FUNCIONES
     //logica de spawn de enemigos
     public void SpawnEnemy()
     {
@@ -46,6 +50,7 @@ public class Game_Manager : MonoBehaviour
             Instantiate(objectsPrefabs[randomEnemy], SpawnPosition.transform.position, SpawnPosition.transform.rotation);
     }
 
+    //lleva a cabo la creacion de tantos enemigos como indique el numero(se ejecuta en el script Spawn_enemiesxroom)
     public void SpawnEnemies(int totalenemies)
     {
         for (int i = 0; i < totalenemies; i++)
@@ -54,6 +59,7 @@ public class Game_Manager : MonoBehaviour
         }
     }
 
+    //lleva a la escena deseada
     public void GoToScene(string sceneName)
     {
         // Cargamos la escena que tenga por nombre sceneName
@@ -69,4 +75,5 @@ public class Game_Manager : MonoBehaviour
 #endif
         Application.Quit();
     }
+#endregion
 }

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Cam_controller : MonoBehaviour
 {
+
     public float xRotation;
     public GameObject playerBody;
     public float speed = 100f;
