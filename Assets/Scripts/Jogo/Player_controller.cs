@@ -80,7 +80,11 @@ public class Player_controller : MonoBehaviour
 
     private void ActivarParticulas()
     {
-        //chispas
+        chispas.Play();
+    }
+    private void DesactivarParticulas()
+    {
+        chispas.Stop();
     }
 
     //interaccion del player con los enemigos

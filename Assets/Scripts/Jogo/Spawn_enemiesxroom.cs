@@ -22,22 +22,26 @@ public class Spawn_enemiesxroom : MonoBehaviour
         conexionGame.SpawnEnemies(totalEnemies);
     }
 
-    private void OnCollisionStay(Collision collision)
+    private void OnTriggerStay(Collider collision)
     {
-        if(collision.gameObject.CompareTag("cabolo") || collision.gameObject.CompareTag("canon"))
-        {
-            salavacia = false;
-        }
-        else
+        /*if(collision.gameObject.CompareTag("cabolo")/* || /*collision.gameObject.CompareTag("canon"))
         {
             salavacia = true;
-            AbrirPuertas();
+            Debug.Log("siuuu");
         }
+        
+        else
+        {
+            salavacia = false;
+            AbrirPuertas();
+            
+        }*/
+        //Debug.Log(collision.gameObject.CompareTag(collision.gameObject));
     }
 
     public void AbrirPuertas()
     {
-        if(salavacia == true)
+        if(salavacia == false)
         {
             door.SetActive(false);
         }
