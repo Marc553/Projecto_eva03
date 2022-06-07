@@ -10,22 +10,19 @@ using UnityEditor;
 public class Options_Manager : MonoBehaviour
 {
     #region VARAIBLES
+    //variables globales
     private AudioSource musicaMenu;
     public AudioClip ambienteMenu;
 
     private AudioSource sonidoEfectos;
     public AudioClip efecto;
 
-
+    //datapersitence
     public Slider volumeSliderMusica; //donde sacaremos el valor (float)
     public Slider volumeSliderEfectos; //donde sacaremos el valor (float)
 
     private float numeroVolumenMusica;//valor del slider (float)
     private float numeroVolumenEfectos;//valor del slider (float)
-
-
-    public TextMeshProUGUI SceneChanges;
-    public TextMeshProUGUI LastSceneChanges;
     #endregion
 
     #region METODOS
@@ -38,12 +35,6 @@ public class Options_Manager : MonoBehaviour
 
         LoadUserOptions();
         SaveUserOptions();
-    }
-
-    private void Update()
-    {//preguntar como hacer que suene solo al clicar el slider
-        
-
     }
     #endregion
 
@@ -69,10 +60,6 @@ public class Options_Manager : MonoBehaviour
             numeroVolumenEfectos = Data_persistence.SharedInfo.volumenEfectos;//coge el último valor que ha tenido el slider
             
             LoadVolume();
-
-            //guarda la persistencia de datos entre partidas
-            //Data_persistence.SharedInfo.SaveForFutureGames();
-        
     }
 
     #region UpdateVolume

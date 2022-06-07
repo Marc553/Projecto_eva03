@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1669647261200524771}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: dentadura
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48,7 +48,7 @@ GameObject:
   - component: {fileID: 1669647261208090217}
   - component: {fileID: 1669647261208090219}
   - component: {fileID: 1669647261208090216}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: cabolo_derecho
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -129,7 +129,7 @@ GameObject:
   - component: {fileID: 1669647261235214002}
   - component: {fileID: 1669647261235214004}
   - component: {fileID: 1669647261235214005}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ojos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -210,7 +210,7 @@ GameObject:
   - component: {fileID: 1669647261241520941}
   - component: {fileID: 1669647261241520942}
   - component: {fileID: 1669647261241520943}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cube (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -289,7 +289,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1669647261271437720}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: dentadura
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -328,7 +328,7 @@ GameObject:
   - component: {fileID: 1669647261377631716}
   - component: {fileID: 1669647261377631721}
   - component: {fileID: 1669647261377631718}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cube (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -407,7 +407,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1669647261447664800}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: diente (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -438,7 +438,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1669647261449783089}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: diente (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -471,7 +471,7 @@ GameObject:
   - component: {fileID: 1669647261470091856}
   - component: {fileID: 1669647261470091861}
   - component: {fileID: 1669647261470091858}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cube (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -552,7 +552,7 @@ GameObject:
   - component: {fileID: 1669647261478851870}
   - component: {fileID: 1669647261478851843}
   - component: {fileID: 1669647261478851840}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cube (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -633,7 +633,7 @@ GameObject:
   - component: {fileID: 1669647261489526888}
   - component: {fileID: 1669647261489526893}
   - component: {fileID: 1669647261489526890}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cube (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -712,7 +712,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1669647261529164514}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: diente (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -745,7 +745,7 @@ GameObject:
   - component: {fileID: 1669647261574925722}
   - component: {fileID: 1669647261574925727}
   - component: {fileID: 1669647261574925724}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: pierna_izquerda
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -824,7 +824,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1669647261605016193}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: diente (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -855,7 +855,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1669647261606804966}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: diente (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -887,7 +887,7 @@ GameObject:
   - component: {fileID: 1669647261625144337}
   - component: {fileID: 1669647261625144339}
   - component: {fileID: 1669647261625144336}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: cabolo_izquierdo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -968,7 +968,7 @@ GameObject:
   - component: {fileID: 1669647261643735480}
   - component: {fileID: 1669647261643735485}
   - component: {fileID: 1669647261643735482}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cube (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1049,7 +1049,7 @@ GameObject:
   - component: {fileID: 1669647261724512985}
   - component: {fileID: 1669647261724512986}
   - component: {fileID: 1669647261724512987}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cube (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1130,7 +1130,7 @@ GameObject:
   - component: {fileID: 1669647261775751164}
   - component: {fileID: 1669647261775751137}
   - component: {fileID: 1669647261775751166}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: pierna_derecha
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1209,7 +1209,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1669647261864043700}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: diente (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1240,7 +1240,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1669647261876821261}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: diente (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1273,7 +1273,7 @@ GameObject:
   - component: {fileID: 1669647261935120837}
   - component: {fileID: 1669647261935120839}
   - component: {fileID: 1669647261935120836}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: mandibula_superior
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1355,7 +1355,7 @@ GameObject:
   - component: {fileID: 1669647261984257575}
   - component: {fileID: 1669647261984257577}
   - component: {fileID: 1669647261984257574}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: mandibula_inferior
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1438,7 +1438,8 @@ GameObject:
   - component: {fileID: 1669647262105437634}
   - component: {fileID: 1669647262105437636}
   - component: {fileID: 1669647262105437639}
-  m_Layer: 0
+  - component: {fileID: 5928770888423752597}
+  m_Layer: 7
   m_Name: cabolo_enemy
   m_TagString: cabolo
   m_Icon: {fileID: 0}
@@ -1524,6 +1525,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 10.336644, z: 8.701241}
   m_Center: {x: 0, y: -1.1001741, z: -0.40141392}
+--- !u!54 &5928770888423752597
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1669647262105437635}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1669647262122310319
 GameObject:
   m_ObjectHideFlags: 0
@@ -1535,7 +1552,7 @@ GameObject:
   - component: {fileID: 1669647262122310318}
   - component: {fileID: 1669647262122310288}
   - component: {fileID: 1669647262122310289}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: cabolo_espalda
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1614,7 +1631,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1669647262157682723}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: diente (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1645,7 +1662,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1669647262196003390}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: diente (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1678,7 +1695,7 @@ GameObject:
   - component: {fileID: 1669647262296740301}
   - component: {fileID: 1669647262296740303}
   - component: {fileID: 1669647262296740300}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: cabolo_culo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1759,7 +1776,7 @@ GameObject:
   - component: {fileID: 1669647262379933887}
   - component: {fileID: 1669647262379933857}
   - component: {fileID: 1669647262379933886}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: cadera_izquierda
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1840,7 +1857,7 @@ GameObject:
   - component: {fileID: 1669647262380586512}
   - component: {fileID: 1669647262380586517}
   - component: {fileID: 1669647262380586514}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: pie_izquierdo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1919,7 +1936,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1669647262426137092}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: diente
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1952,7 +1969,7 @@ GameObject:
   - component: {fileID: 1669647262512659578}
   - component: {fileID: 1669647262512659583}
   - component: {fileID: 1669647262512659580}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cube (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2033,7 +2050,7 @@ GameObject:
   - component: {fileID: 1669647262670743929}
   - component: {fileID: 1669647262670743931}
   - component: {fileID: 1669647262670743928}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: cabolo_arriba
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2114,7 +2131,7 @@ GameObject:
   - component: {fileID: 1669647262685232947}
   - component: {fileID: 1669647262685232948}
   - component: {fileID: 1669647262685232949}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cube (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2195,7 +2212,7 @@ GameObject:
   - component: {fileID: 1669647262768902393}
   - component: {fileID: 1669647262768902395}
   - component: {fileID: 1669647262768902392}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: cadera_derecha
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2274,7 +2291,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1669647262820219788}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: diente (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2305,7 +2322,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1669647262848838952}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: diente (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2336,7 +2353,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1669647262865369447}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: diente (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2369,7 +2386,7 @@ GameObject:
   - component: {fileID: 1669647262895215028}
   - component: {fileID: 1669647262895215033}
   - component: {fileID: 1669647262895215030}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cube (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2450,7 +2467,7 @@ GameObject:
   - component: {fileID: 1669647262902413638}
   - component: {fileID: 1669647262902413643}
   - component: {fileID: 1669647262902413640}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: pie_derecho
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2531,7 +2548,7 @@ GameObject:
   - component: {fileID: 1669647262969043698}
   - component: {fileID: 1669647262969043703}
   - component: {fileID: 1669647262969043700}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cube (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2612,7 +2629,7 @@ GameObject:
   - component: {fileID: 1669647263057824581}
   - component: {fileID: 1669647263057824582}
   - component: {fileID: 1669647263057824583}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cube (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2693,7 +2710,7 @@ GameObject:
   - component: {fileID: 1669647263071279813}
   - component: {fileID: 1669647263071279814}
   - component: {fileID: 1669647263071279815}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cube (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2772,7 +2789,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1669647263193162690}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: diente (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

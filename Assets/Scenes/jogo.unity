@@ -11473,6 +11473,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1825574500}
   - component: {fileID: 1825574501}
+  - component: {fileID: 1825574502}
   m_Layer: 0
   m_Name: Sala3
   m_TagString: Untagged
@@ -11508,6 +11509,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   totalEnemies: 6
   door: {fileID: 1953783973}
+--- !u!65 &1825574502
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1825574499}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 76.38136, y: 26.768314, z: 204.13501}
+  m_Center: {x: -9.8830185, y: 8.385757, z: 70.13489}
 --- !u!1 &1953783973
 GameObject:
   m_ObjectHideFlags: 0

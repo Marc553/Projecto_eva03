@@ -32,9 +32,11 @@ public class Game_Manager : MonoBehaviour
 
     public TextMeshProUGUI volume; //float
 
+    //detectar que acabaste con todos
     public int enemiesLeftCabolo;
     public int enemiesLeftCanon;
 
+    //variables para el game over
     public bool isGameOver = true;
     public GameObject gameOverPanel;
 
@@ -42,8 +44,9 @@ public class Game_Manager : MonoBehaviour
 
     #endregion
 
+    #region METODOS
     private void Start()
-    {
+    { //logicas llamadas en otros scripts y la musica por data persistence
         SpawnEnemy();
         musicaMazmorra = GetComponent<AudioSource>();
         musicaMazmorra.PlayOneShot(ambienteMazmorra);
@@ -70,6 +73,7 @@ public class Game_Manager : MonoBehaviour
            }
         }
     }
+    #endregion
 
     #region FUNCIONES
 

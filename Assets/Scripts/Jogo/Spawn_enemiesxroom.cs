@@ -8,6 +8,7 @@ public class Spawn_enemiesxroom : MonoBehaviour
     private Game_Manager conexionGame;
     [SerializeField] int totalEnemies;
 
+    
     private int enemigos_cabolos;
     private int enemigos_canon;
 
@@ -22,26 +23,28 @@ public class Spawn_enemiesxroom : MonoBehaviour
         conexionGame.SpawnEnemies(totalEnemies);
     }
 
+    private void Update()
+    {
+        AbrirPuertas();
+    }
+
     private void OnTriggerStay(Collider collision)
     {
-        /*if(collision.gameObject.CompareTag("cabolo")/* || /*collision.gameObject.CompareTag("canon"))
+        if(collision.gameObject.CompareTag("cabolo") || collision.gameObject.CompareTag("canon"))
         {
-            salavacia = true;
-            Debug.Log("siuuu");
+            salavacia = false;
         }
         
         else
         {
-            salavacia = false;
-            AbrirPuertas();
-            
-        }*/
-        //Debug.Log(collision.gameObject.CompareTag(collision.gameObject));
+            salavacia = true;
+        }
+        
     }
 
     public void AbrirPuertas()
     {
-        if(salavacia == false)
+        if(salavacia == true)
         {
             door.SetActive(false);
         }

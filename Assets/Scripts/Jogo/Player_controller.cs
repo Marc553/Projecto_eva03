@@ -57,9 +57,9 @@ public class Player_controller : MonoBehaviour
             
         }
     }
-#endregion
+    #endregion
 
-    #region FUNCIONES
+    #region FUNCIONES USADAS EN LA ANIMACION(ajustes de unity)
 
     //creo la logica del collider de la espada
 
@@ -86,6 +86,7 @@ public class Player_controller : MonoBehaviour
     {
         chispas.Stop();
     }
+#endregion
 
     //interaccion del player con los enemigos
     private void OnCollisionEnter(Collision collision)
@@ -103,6 +104,4 @@ public class Player_controller : MonoBehaviour
             Destroy(collision.gameObject);
         }
     }
-
-    #endregion
 }
