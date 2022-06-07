@@ -63,18 +63,16 @@ public class Options_Manager : MonoBehaviour
     public void LoadUserOptions()
     {
         //si tiene esta clave, entonces tiene todas
-        if (PlayerPrefs.HasKey("VOLUMEN"))
-        {
 
-            numeroVolumenMusica = PlayerPrefs.GetFloat("MUSICA");//coge el último valor que ha tenido el slider
+            numeroVolumenMusica = Data_persistence.SharedInfo.volumenMusica;//coge el último valor que ha tenido el slider
 
-            numeroVolumenEfectos = PlayerPrefs.GetFloat("EFECTOS");//coge el último valor que ha tenido el slider
+            numeroVolumenEfectos = Data_persistence.SharedInfo.volumenEfectos;//coge el último valor que ha tenido el slider
             
             LoadVolume();
 
             //guarda la persistencia de datos entre partidas
-            Data_persistence.SharedInfo.SaveForFutureGames();
-        }
+            //Data_persistence.SharedInfo.SaveForFutureGames();
+        
     }
 
     #region UpdateVolume
@@ -83,10 +81,13 @@ public class Options_Manager : MonoBehaviour
         volumeSliderMusica.GetComponent<Slider>().value = numeroVolumenMusica;
         volumeSliderEfectos.GetComponent<Slider>().value = numeroVolumenEfectos;
     }
-    public void VolumeSelection() //para que cuando cambiemos el valor del slider guardemos el valor para pasarlo al datapersistance
+    public void VolumeSelection(float V) //para que cuando cambiemos el valor del slider guardemos el valor para pasarlo al datapersistance
     {
-        numeroVolumenMusica = volumeSliderMusica.GetComponent<Slider>().value;
-        numeroVolumenEfectos = volumeSliderEfectos.GetComponent<Slider>().value;
+        numeroVolumenMusica = V;
+    }
+    public void VolumeSelection2(float V) //para que cuando cambiemos el valor del slider guardemos el valor para pasarlo al datapersistance
+    {
+        numeroVolumenEfectos = V;
     }
     #endregion
 
@@ -99,4 +100,10 @@ public class Options_Manager : MonoBehaviour
     }
 
     #endregion
+
+    public void PruebaEfectos()
+    {
+        Debug.Log("si");
+        //sonidoEfectos.PlayOneShot(efecto,numeroVolumenEfectos);
+    }
 }

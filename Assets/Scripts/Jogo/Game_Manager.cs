@@ -28,10 +28,17 @@ public class Game_Manager : MonoBehaviour
 
     public AudioSource sonidoEfectos;
     public AudioClip efectoEnemigo;
+    public AudioClip ganar;
 
     public TextMeshProUGUI volume; //float
 
+    public int enemiesLeftCabolo;
+    public int enemiesLeftCanon;
 
+    public bool isGameOver = true;
+    public GameObject gameOverPanel;
+
+    public GameObject rasho;
 
     #endregion
 
@@ -42,13 +49,37 @@ public class Game_Manager : MonoBehaviour
         musicaMazmorra.PlayOneShot(ambienteMazmorra);
 
         sonidoEfectos = GameObject.Find("Efectos").GetComponent<AudioSource>();
-
+        
         musicaMazmorra.volume = Data_persistence.SharedInfo.volumenMusica;
         sonidoEfectos.volume = Data_persistence.SharedInfo.volumenEfectos;
+        isGameOver = false;
     }
+
+    private void Update()
+    {
+        if (!isGameOver)
+        {
+            enemiesLeftCabolo = FindObjectsOfType<Enemy_cabolo>().Length;
+            enemiesLeftCanon = FindObjectsOfType<Enemy_canon>().Length;
+
+           if(enemiesLeftCabolo <= 0 && enemiesLeftCanon <= 0)
+           {
+                rasho.SetActive(true);
+                sonidoEfectos.PlayOneShot(ganar);
+                Debug.Log("ganaste");
+           }
+        }
+    }
+
     #region FUNCIONES
 
-    
+    public void GameOver()
+    {
+        musicaMazmorra.Stop();
+        sonidoEfectos.Stop();
+        isGameOver = true;
+        gameOverPanel.SetActive(true);
+    }
 
 
 

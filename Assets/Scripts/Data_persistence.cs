@@ -30,6 +30,22 @@ public class Data_persistence : MonoBehaviour
             Destroy(this);
         }
     }
+
+    private void Start()
+    {
+        if(PlayerPrefs.HasKey("MUSICA"))
+        {
+            volumenMusica = PlayerPrefs.GetFloat("MUSICA");
+            volumenEfectos = PlayerPrefs.GetFloat("EFECTOS");
+
+        }
+        else
+        {
+            volumenMusica = 0.75f;
+            volumenEfectos = 0.75f;
+
+        }
+    }
     public void SaveForFutureGames()
     {
         //volumen

@@ -45,6 +45,7 @@ public class Player_controller : MonoBehaviour
         if (vida <= 0)
         {
             Destroy(gameObject);
+            scriptGame.GameOver();
         }
 
         //logica ataque(aqui solo invoco la aniamción al atacar)
