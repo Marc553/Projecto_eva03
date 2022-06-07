@@ -12,6 +12,7 @@ TagManager:
   - espada
   - cabolo
   - Projectil
+  - mapa
   layers:
   - Default
   - TransparentFX

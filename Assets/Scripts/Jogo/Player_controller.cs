@@ -18,6 +18,8 @@ public class Player_controller : MonoBehaviour
 
     private Game_Manager scriptGame;
 
+    public ParticleSystem chispas;
+
 
     #endregion
 
@@ -52,7 +54,7 @@ public class Player_controller : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             playerAnimator.SetTrigger("Atacar");
-            scriptGame.sonidoEfectos.PlayOneShot(scriptGame.efectoEnemigo);
+            
         }
     }
 #endregion
@@ -71,18 +73,29 @@ public class Player_controller : MonoBehaviour
         ataqueCollider.enabled = false;//desactiva el collider activado al acabar la animacion(atado mediante las propias funciones de unity, sin codigo)
     }
 
+    private void SonidoAtaque()
+    {
+        scriptGame.sonidoEfectos.PlayOneShot(scriptGame.efectoEnemigo);
+    }
+
+    private void ActivarParticulas()
+    {
+        //chispas
+    }
+
     //interaccion del player con los enemigos
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("cabolo"))
         {
             vida -= 0.5f;
+            playerAnimator.SetTrigger("Dañado");
         }
 
         if (collision.gameObject.CompareTag("Projectil"))
         {
             vida -= 1;
-            
+            playerAnimator.SetTrigger("Dañado");
             Destroy(collision.gameObject);
         }
     }

@@ -11,6 +11,10 @@ public class Spawn_enemiesxroom : MonoBehaviour
     private int enemigos_cabolos;
     private int enemigos_canon;
 
+    private bool salavacia;
+    public GameObject door;
+
+
     private void Start()
     {
         //conecto la varaible con el script Game manager para llamar al spawn enemies tantas veces como quiera en cada sala diferente
@@ -18,11 +22,24 @@ public class Spawn_enemiesxroom : MonoBehaviour
         conexionGame.SpawnEnemies(totalEnemies);
     }
 
-    private void OnCollision(Collision collision)
+    private void OnCollisionStay(Collision collision)
     {
-        if(collision.gameObject.CompareTag("Player"))
+        if(collision.gameObject.CompareTag("cabolo") || collision.gameObject.CompareTag("canon"))
         {
-            //enemigos_cabolos = find
+            salavacia = false;
+        }
+        else
+        {
+            salavacia = true;
+            AbrirPuertas();
+        }
+    }
+
+    public void AbrirPuertas()
+    {
+        if(salavacia == true)
+        {
+            door.SetActive(false);
         }
     }
 
