@@ -36,7 +36,9 @@ public class Player_controller : MonoBehaviour
 
     void Update()
     {
-        //movimineto por fuerzas del player
+        if(scriptGame.isGameOver  == false)
+        {
+            //movimineto por fuerzas del player
         float verticalInputmov = Input.GetAxis("Verticalmov"); 
         float horizontalInputmov = Input.GetAxis("Horizontalmov");
 
@@ -54,8 +56,9 @@ public class Player_controller : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             playerAnimator.SetTrigger("Atacar");
-            
         }
+        }
+        
     }
     #endregion
 
@@ -102,6 +105,11 @@ public class Player_controller : MonoBehaviour
             vida -= 1;
             playerAnimator.SetTrigger("Dañado");
             Destroy(collision.gameObject);
+        }
+
+        if(collision.gameObject.CompareTag("ganar"))
+        {
+            scriptGame.YouWin();
         }
     }
 }

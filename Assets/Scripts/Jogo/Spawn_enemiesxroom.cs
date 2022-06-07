@@ -15,6 +15,7 @@ public class Spawn_enemiesxroom : MonoBehaviour
     private bool salavacia;
     public GameObject door;
 
+    //public List<Collider> TriggerList = new List<Collider>();
 
     private void Start()
     {
@@ -23,31 +24,20 @@ public class Spawn_enemiesxroom : MonoBehaviour
         conexionGame.SpawnEnemies(totalEnemies);
     }
 
-    private void Update()
+    /*public void OnTriggerEnter(Collider other)
     {
-        AbrirPuertas();
-    }
+        //if the object is not already in the list
+        if (other.gameObject.CompareTag("cabolo") || other.gameObject.CompareTag("canon"))
+        {
+            //add the object to the list
+            TriggerList.Add(other);
 
-    private void OnTriggerStay(Collider collision)
-    {
-        if(collision.gameObject.CompareTag("cabolo") || collision.gameObject.CompareTag("canon"))
-        {
-            salavacia = false;
+            Debug.Log(TriggerList);
         }
-        
-        else
-        {
-            salavacia = true;
-        }
-        
-    }
 
-    public void AbrirPuertas()
-    {
-        if(salavacia == true)
-        {
-            door.SetActive(false);
-        }
-    }
+        
+    }*/
+
+    
 
 }

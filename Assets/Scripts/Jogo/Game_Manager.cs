@@ -37,8 +37,9 @@ public class Game_Manager : MonoBehaviour
     public int enemiesLeftCanon;
 
     //variables para el game over
-    public bool isGameOver = true;
+    public bool isGameOver;
     public GameObject gameOverPanel;
+    public GameObject winnerPanel;
 
     public GameObject rasho;
 
@@ -60,7 +61,7 @@ public class Game_Manager : MonoBehaviour
 
     private void Update()
     {
-        if (!isGameOver)
+        if(isGameOver == false)
         {
             enemiesLeftCabolo = FindObjectsOfType<Enemy_cabolo>().Length;
             enemiesLeftCanon = FindObjectsOfType<Enemy_canon>().Length;
@@ -69,9 +70,10 @@ public class Game_Manager : MonoBehaviour
            {
                 rasho.SetActive(true);
                 sonidoEfectos.PlayOneShot(ganar);
-                Debug.Log("ganaste");
+                musicaMazmorra.Stop();
            }
         }
+            
     }
     #endregion
 
@@ -85,6 +87,12 @@ public class Game_Manager : MonoBehaviour
         gameOverPanel.SetActive(true);
     }
 
+    public void YouWin()
+    {
+        musicaMazmorra.Stop();
+        sonidoEfectos.Stop();
+        winnerPanel.SetActive(true);
+    }
 
 
     //logica de spawn de enemigos
